@@ -6,10 +6,12 @@ const rl = readline.createInterface({
 });
 
 rl.question('Введите целое неотрицательное число: ', (input) => {
-    const n = parseInt(input);
+    const n = Number(input);
 
     if (isNaN(n)) {
         console.log('Ошибка: введено не число.');
+    } else if (!Number.isInteger(n)) {
+        console.log('Ошибка: число должно быть целым.');
     } else if (n < 0) {
         console.log('Ошибка: число не может быть отрицательным.');
     } else {

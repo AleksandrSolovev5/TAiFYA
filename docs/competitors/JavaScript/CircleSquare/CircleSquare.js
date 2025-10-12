@@ -1,8 +1,8 @@
-const readline = require('readline'); // импорт модуля nodeJS, который позволяет читать строки с клавиатуры
+const readline = require('readline');
 
 const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout10
 });
 
 rl.question('Введите радиус круга: ', (input) => {
