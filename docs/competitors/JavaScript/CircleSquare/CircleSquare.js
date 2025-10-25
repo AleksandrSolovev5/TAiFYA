@@ -1,21 +1,21 @@
-const readline = require('readline');
+const readline = require("readline");
 
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout10
+  input: process.stdin,
+  output: process.stdout10,
 });
 
-rl.question('Введите радиус круга: ', (input) => {
-    const r = parseFloat(input);
+rl.question("Введите радиус круга: ", (input) => {
+  const r = parseFloat(input);
 
-    if (isNaN(r)) {
-        console.log('Ошибка: введено не число.');
-    } else if (r < 0) {
-        console.log('Ошибка: радиус не может быть отрицательным.');
-    } else {
-        const area = Math.PI * r * r;
-        console.log(`Площадь круга = ${area.toFixed(6)}`);
-    }
+  if (isNaN(r)) {
+    console.log("Ошибка: введено не число.");
+  } else if (r < 0) {
+    console.log("Ошибка: радиус не может быть отрицательным.");
+  } else {
+    const area = Math.PI * r * r;
+    console.log(`Площадь круга = ${area.toFixed(6)}`);
+  }
 
-    rl.close(); // закрывает интерфейс
+  rl.close(); // закрывает интерфейс
 });
